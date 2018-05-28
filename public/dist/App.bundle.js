@@ -63,55 +63,25 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-// based on https://gist.github.com/paulirish/12fb951a8b893a454b32
-
-var $ = document.querySelector.bind(document);
-var $$ = document.querySelectorAll.bind(document);
-
-Node.prototype.on = window.on = function (name, fn) {
-  this.addEventListener(name, fn);
-};
-
-NodeList.prototype.__proto__ = Array.prototype; // eslint-disable-line
-
-NodeList.prototype.on = NodeList.prototype.addEventListener = function (name, fn) {
-  this.forEach(function (elem) {
-    elem.on(name, fn);
-  });
-};
-
-exports.$ = $;
-exports.$$ = $$;
+throw new Error("Module build failed: ModuleBuildError: Module build failed: \r\n@import \"node_modules/bootstrap/scss/bootstrap\";\r\n^\r\n      File to import not found or unreadable: node_modules/bootstrap/scss/bootstrap.\r\n      in C:\\Users\\Per\\code\\atplgy-git\\public\\sass\\bootstrap\\_config.scss (line 2, column 1)\n    at C:\\Users\\Per\\code\\atplgy-git\\node_modules\\webpack\\lib\\NormalModule.js:141:35\n    at C:\\Users\\Per\\code\\atplgy-git\\node_modules\\loader-runner\\lib\\LoaderRunner.js:364:11\n    at C:\\Users\\Per\\code\\atplgy-git\\node_modules\\loader-runner\\lib\\LoaderRunner.js:230:18\n    at context.callback (C:\\Users\\Per\\code\\atplgy-git\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (C:\\Users\\Per\\code\\atplgy-git\\node_modules\\sass-loader\\lib\\loader.js:57:13)\n    at Object.<anonymous> (C:\\Users\\Per\\code\\atplgy-git\\node_modules\\sass-loader\\node_modules\\async\\dist\\async.js:2271:31)\n    at Object.callback (C:\\Users\\Per\\code\\atplgy-git\\node_modules\\sass-loader\\node_modules\\async\\dist\\async.js:969:16)\n    at options.error (C:\\Users\\Per\\code\\atplgy-git\\node_modules\\node-sass\\lib\\index.js:294:32)");
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(1);
+__webpack_require__(0);
 
-var _bling = __webpack_require__(0);
+__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"booking\""); e.code = 'MODULE_NOT_FOUND';; throw e; }()));
 
 /***/ })
 /******/ ]);
