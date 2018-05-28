@@ -1,0 +1,79 @@
+block content
+section
+
+  nav.navbar-desktop.navbar.navbar-expand-lg.navbar-light.p-2.container.d-none.d-lg-flex
+    .container.mx-5
+      .navbar-collapse.collapse
+        ul.nav.navbar-nav
+          li.nav-item
+            a.nav-link(href='/homecare') Home care
+          li.nav-item
+            a.nav-link(href='/hospice') Hospice
+          li.nav-item
+            a.nav-link(href='/services') Services
+      a.navbar-brand.mr-auto(href='/')
+        img(src="/images/brand/logo/atplgy-full-logo.svg", height="100", alt="logo")
+      .navbar-collapse.collapse
+        ul.nav.navbar-nav.ml-auto
+          li.nav-item
+            a.nav-link(href='/about') About us
+        a.btn.btn-outline-secondary.px-3.p-2.ml-3(href="/booking") Make appointment
+
+
+  nav.navbar.navbar-expand-lg.navbar-light.p-2.container.d-none.d-sm-block.d-lg-none
+    .container-fluid.text-center
+      .col-12.mb-1
+        a.navbar-brand.mr-auto.p-2(href='/')
+          img(src="/images/brand/logo/atplgy-logo-lightgrey.svg", height="16px", alt="logo")
+      .col-12.navbar-nav.d-flex.flex-row.justify-content-around
+        .nav-item
+          a.nav-link(href='/homecare') Home care
+        .nav-item
+          a.nav-link(href='/hospice') Hospice
+        .nav-item
+          a.nav-link(href='/services') Services
+        .nav-item
+          a.nav-link(href='/about') About us
+        .nav-item
+          a.btn.btn-outline-secondary.p-2.ml-3(href="/booking") Make appointment
+
+  nav.navbar.navbar-light.d-sm-none
+    .container-fluid.text-center
+      .col-12
+        a.navbar-brand.mr-auto.p-2(href='/')
+          img(src="/images/brand/logo/atplgy-logo-lightgrey.svg", height="16px", alt="logo")
+      .col-12.navbar-nav.d-flex.flex-row.justify-content-around.mb-2
+        .nav-item
+        .nav-item
+          a.nav-link(href='/homecare') Home care
+        .nav-item
+          a.nav-link(href='/hospice') Hospice
+        .nav-item
+          a.nav-link(href='/services') Services
+        .nav-item
+          a.nav-link(href='/about') About us
+      .col-12.mb-2
+          a.btn.btn-outline-secondary(href="/booking") Make appointment
+
+  #menu
+    nav.navbar.navbar-expand-lg.navbar-light.p-4.container
+      .container.mx-5
+        a.navbar-brand.mr-auto(href='/').d-lg-none
+          img(src="/images/brand/logo/atplgy-logo-lightgrey.svg", height="12", alt="logo")
+        button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+          | ☰
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav
+            li.nav-item
+              a.nav-link(href='/homecare') Home care
+            li.nav-item
+              a.nav-link(href='/hospice') Hospice
+            li.nav-item
+              a.nav-link(href='/services') Services
+        a.navbar-brand.mr-auto(href='/').d-none.d-lg-block
+          img(src="/images/brand/logo/atplgy-logo-lightgrey.svg", height="12", alt="logo")
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link(href='/about') About us
+          a.btn.btn-outline-secondary.px-3.p-2.ml-lg-3(href="/booking") Make appointment

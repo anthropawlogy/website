@@ -1,0 +1,39 @@
+extends ../layout
+
+block content
+  section.mb-5
+    .container
+      .ui.middle.aligned.center.aligned.grid(style='margin-top:25px')
+        .column
+            #form-container.ui.raised.left.aligned.very.padded.segment
+              p Thank you! We will contact to confirm your appointment time within the business day.
+              p Please contact us directly at
+                a(href="mailto:booking@anthropawlogy.com")  booking@anthropawlogy.com
+                |  if you have any questions about your booking.
+    .container(style="min-height:35vh")
+
+  //- JQuery libs (old booking system)
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.js")
+  script(src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js")
+
+  //- semantic ui css
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/dropdown.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/checkbox.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/form.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/popup.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/icon.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/step.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/segment.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/grid.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/button.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/label.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/transition.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/header.min.css')
+
+
+  //- semantic ui
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/dropdown.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/checkbox.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/form.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/popup.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/transition.min.js")

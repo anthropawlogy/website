@@ -1,0 +1,177 @@
+extends ../layout
+
+block content
+  section.mb-5
+    .container
+      .ui.middle.aligned.center.aligned.grid(style='margin-top:25px')
+        .column
+          h2.ui.image.header
+            //- img.image(src='img/girl_dog_black.svg')
+            .content
+              | Request an apppointment
+            .ui.unstackable.four.steps
+              .step
+                i.user.icon.mx-auto
+                .ui.content.computer.only.grid
+                  .title
+                  .description Contact details
+              .disabled.step
+                i.paw.icon.mx-auto
+                .ui.content.computer.only.grid
+                  .title
+                  .description Pet details
+              .disabled.step
+                i.clock.icon.mx-auto
+                .ui.content.computer.only.grid
+                  .title
+                  .description Appointment details
+              .disabled.step
+                i.check.icon.mx-auto
+                .ui.content.computer.only.grid
+                  .title
+                  .description Send booking request
+            #form-container.ui.raised.left.aligned.very.padded.segment
+              form#booking-form.ui.large.form(action="/booking", method='POST')
+                //- | {{ csrf_field() }}
+                .contactDetails
+                  h4.ui.dividing.header Tell Us About Yourself
+                  .field
+                    label Name
+                    .two.fields
+                      .field
+                        input(type='text', name='contactFirstName', placeholder='First Name')
+                      .field
+                        input(type='text', name='contactLastName', placeholder='Last Name')
+                  .field
+                    label E-mail
+                    input(type='email', name='contactEmail', placeholder='your@email.com')
+                  .field
+                    label Phone Number
+                    input(type='tel', name='contactPhone', placeholder='Phone Number')
+                  .field
+                    label Address
+                    .two.fields
+                      .field
+                        input(type='text', name='contactAddress', placeholder='Address')
+                      .field
+                        input(type='text', name='contactZip', placeholder='Zip code')
+                  .field
+                    label How would you like to be contacted?
+                    .inline.fields
+                      .field
+                        .ui.radio.checkbox
+                          input(type='radio', name='contactPreference', tabindex='0', value='Email')
+                          label E-Mail
+                      .field
+                        .ui.radio.checkbox
+                          input(type='radio', name='contactPreference', tabindex='0', value='Text')
+                          label Text
+                      .field
+                        .ui.radio.checkbox
+                          input(type='radio', name='contactPreference', tabindex='0', value='Call')
+                          label Call
+                  .ui.clearing.divider
+
+                .petDetails
+                  h4.ui.dividing.header Tell Us About Your Pet
+                  .field
+                    label Pet's Name
+                    input(type='text', name='petName', placeholder="Pet's Name")
+                  .field
+                    label Species
+                    .inline.fields
+                      .field
+                        .ui.radio.checkbox
+                          input(type='radio', name='petSpecies', value='Dog')
+                          label Dog
+                      .field
+                        .ui.radio.checkbox
+                          input(type='radio', name='petSpecies', value='Cat')
+                          label Cat
+                      .field
+                        .ui.radio.checkbox
+                          input(type='radio', name='petSpecies', value='Other')
+                          label Other
+                  .field
+                    label Gender
+                    .ui.selection.dropdown
+                      input(type='hidden', name='petGender')
+                      i.dropdown.icon
+                      .default.text Gender
+                      .menu
+                        .item(data-value='Male') Male
+                        .item(data-value='Female') Female
+                  .field
+                    label Age
+                    input(type='text', name='petAge', placeholder='Age')
+                  .field
+                    label Breed
+                    input(type='text', name='petBreed', placeholder='Breed')
+                  .field
+                    label Briefly describe reason for appointment:
+                    textarea(rows='3', name='petComplaint', placeholder='Please describe..')
+                .apptDetails
+                  h4.ui.dividing.header Appointment details
+                  .field
+                    label When would you like to be seen?
+                    input#datepicker(type='text', name='apptDate', readonly='readonly', placeholder='Date')
+                  .grouped.fields
+                    label Preferred time (we will confirm exact time)
+                    #morning
+                      .field
+                        .ui.radio.checkbox
+                          input(type='radio', name='apptTime', value='Morning (10-12pm)')
+                          label Morning (10-12pm)
+                    #lunch
+                      .field
+                        .ui.radio.checkbox
+                          input(type='radio', name='apptTime', value='Afternoon (12-2pm)')
+                          label Afternoon (12-2pm)
+                    #evening
+                      .field
+                        .ui.radio.checkbox
+                          input(type='radio', name='apptTime', value='Evening (2-5pm)')
+                          label Evening (2-5pm)
+                .subDetails
+                  .field
+                    label Click submit to confirm your request!
+                    #prevBtn2.ui.button Go Back
+                    //- input#submitBtn.ui.teal.button(type="submit" value="Submit")
+                    input#submitBtn.ui.teal.button(type="submit" value="Submit")
+                .navButtons.center.aligned.very.padded.field
+                  .ui.divider
+                  #prevBtn.ui.button Previous
+                  #nxtBtn.ui.teal.button Next
+                  //- #prevBtn.btn.btn-secondary Previous
+                  //- #nxtBtn.btn.btn-success Next
+              #loader.ui.active.dimmer(style='display:none')
+                .ui.indeterminate.text.loader Sending Booking Request
+              p
+
+  //- JQuery libs (old booking system)
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.js")
+  script(src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js")
+
+  //- semantic ui css
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/dropdown.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/checkbox.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/form.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/popup.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/icon.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/step.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/segment.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/grid.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/button.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/label.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/transition.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/header.min.css')
+
+  //- bookingjs
+  script(src="javascripts/booking.js")
+
+  //- semantic ui
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/dropdown.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/checkbox.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/form.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/popup.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/transition.min.js")

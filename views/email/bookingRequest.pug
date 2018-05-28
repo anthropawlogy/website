@@ -1,0 +1,99 @@
+extends email-layout
+
+block content
+  span.preheader New booking request
+  table.email-wrapper(width='100%', cellpadding='0', cellspacing='0')
+    tr
+      td(align='center')
+        table.email-content(width='100%', cellpadding='0', cellspacing='0')
+          tr
+            td.email-masthead
+              a.email-masthead_name(href='https://anthropawlogyvet.com')
+                | Anthropawlogy Veterinary Care
+          tr
+            td.email-body(width='100%', cellpadding='0', cellspacing='0')
+              table.email-body_inner(align='center', width='570', cellpadding='0', cellspacing='0')
+                tr
+                  td.content-cell
+                    h1 New booking request
+                    p Contact details:
+                    table.attributes(width='100%', cellpadding='0', cellspacing='0')
+                      tr
+                        td.attributes_content
+                          table(width='100%', cellpadding='0', cellspacing='0')
+                            tr
+                              td.attributes_item
+                                strong Name:
+                                |  #{data.contactFirstName} #{data.contactLastName}
+                            tr
+                              td.attributes_item
+                                strong Email:
+                                |  #{data.contactEmail}
+                            tr
+                              td.attributes_item
+                                strong Phone:
+                                |  #{data.contactPhone }
+                            tr
+                              td.attributes_item
+                                strong Address:
+                                |  #{data.contactAddress }
+                            tr
+                              td.attributes_item
+                                strong Zip code:
+                                |  #{data.contactZip }
+                            tr
+                              td.attributes_item
+                                strong Communication method:
+                                |  #{data.contactPreference }
+                    p Pet details:
+                    table.attributes(width='100%', cellpadding='0', cellspacing='0')
+                      tr
+                        td.attributes_content
+                          table(width='100%', cellpadding='0', cellspacing='0')
+                            tr
+                              td.attributes_item
+                                strong Pet name:
+                                |  #{data.petName}
+                            tr
+                              td.attributes_item
+                                strong Species:
+                                |  #{data.petSpecies}
+                            tr
+                              td.attributes_item
+                                strong Breed:
+                                |  #{data.petBreed}
+                            tr
+                              td.attributes_item
+                                strong Gender:
+                                |  #{data.petGender}
+                            tr
+                              td.attributes_item
+                                strong Age:
+                                |  #{data.petAge}
+                    p Reason for appointment:
+                    table.attributes(width='100%', cellpadding='0', cellspacing='0')
+                      tr
+                        td.attributes_content
+                          table(width='100%', cellpadding='0', cellspacing='0')
+                            tr
+                              td.attributes_item
+                                i #{data.petComplaint}
+                    p Appointment details:
+                    table.attributes(width='100%', cellpadding='0', cellspacing='0')
+                      tr
+                        td.attributes_content
+                          table(width='100%', cellpadding='0', cellspacing='0')
+                            tr
+                              td.attributes_item
+                                strong Requested date:
+                                |  #{data.apptDate}
+                            tr
+                              td.attributes_item
+                                strong Requested time:
+                                |  #{data.apptTime}
+          tr
+            td
+              table.email-footer(align='center', width='570', cellpadding='0', cellspacing='0')
+                tr
+                  td.content-cell(align='center')
+                    p.sub.align-center © #{new Date().getFullYear()} Anthropawlogy Veterinary Care PLLC

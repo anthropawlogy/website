@@ -1,0 +1,59 @@
+.jumbotron {
+  background-color: #f5f5f5 !important;
+  //min-height: 50vh !important;
+  margin-right: -15px;
+  margin-left: -15px;
+  background-size: cover !important;
+  margin-bottom: 0px !important;
+  //font-family: 'Lato', 'Work Sans', 'Avenir Next','Helvetica Neue','Helvetica',Arial,sans-serif;
+  h2 {
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+  }
+}
+
+.jumbotron-homecare {
+  background: url('/images/photos/jumbotron-homecare.jpg');
+  background-position: bottom right !important;
+}
+.jumbotron-hospice {
+  background: url('/images/photos/jumbotron-hospice.jpg');
+  background-position: bottom right !important;
+  //margin-top: -100px !important;
+}
+
+.jumbotron-pricing {
+  background: url('/images/photos/jumbotron-services.jpg');
+  background-position: center center !important;
+  background-size: auto 100% !important;
+  background-repeat: no-repeat;
+}
+
+.jumbotron-about {
+  background: url('/images/photos/jumbotron-about.jpg');
+  background-repeat:no-repeat;
+  //background-size:contain !important;
+  //background-position:center;
+  background-position:top right;
+  //min-height: 531px !important;
+  //min-width: 890px !important;
+  //background-size: cover !important;
+  //min-height: 40vh !important;
+}
+
+.jumbotron-about-mobile {
+  background: url('/images/photos/jumbotron-about.jpg') center center;
+}
+
+.jumbotron-mobile {
+  min-height: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-size: 100% auto !important;
+}
+
+

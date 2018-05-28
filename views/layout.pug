@@ -1,0 +1,80 @@
+doctype html
+html
+  script(type='application/ld+json').
+    {
+    "@context" : "http://schema.org",
+    "@type" : "Organization",
+    "name" : "Anthropawlogy Veterinary Care",
+    "url" : "https://anthropawlogyvet.com/",
+    "logo": "https://anthropawlogyvet.com/img/girl_dog_updated_black.png",
+    "contactPoint": [
+    { "@type": "ContactPoint",
+    "telephone": "+1-406-624-9060",
+    "contactType": "customer service"
+    }
+    ],
+    "sameAs" : [
+    "http://www.facebook.com/anthropawlogyvet",
+    "http://instagram.com/anthropawlogyvet"
+    ]
+    }
+
+  head
+    meta(property='og:image', content='/images/brand/fb_tn.jpg')
+    meta(property='og:type', content='website')
+    meta(property='og:url', content='https://anthropawlogyvet.com')
+    meta(property='og:title', content='Anthropawlogy Veterinary Care')
+    meta(property='og:description', content='Mobile veterinary services in Missoula, MT and surrounding areas.')
+    link(rel='icon', type='image/png', href='/images/icon/favicon-32x32.png', sizes='32x32')
+    link(rel='icon', type='image/png', href='/images/icon/favicon-16x16.png', sizes='16x16')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+    title Anthropawlogy Veterinary Care - Mobile veterinary services in Missoula, MT
+    //-title= `${h.siteName}`
+    link(rel="shortcut icon" type="image/png" href="/images/icons/atplgylogo.png")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    block css
+      link(rel='stylesheet', href='/dist/style.css')
+      link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.0.10/css/all.css')
+      link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css')
+
+    block scripts
+      script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.js")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js")
+      script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js")
+      script(src="/dist/App.bundle.js")
+      script(type='text/javascript').
+        (function($) {
+        $(document).ready(function(){
+        $(window).scroll(function(){
+        if ($(this).scrollTop() > 300) {
+        $('#menu').fadeIn(200);
+        } else {
+        $('#menu').fadeOut(200);
+        }
+        });
+        });
+        })(jQuery);
+
+  body
+    include header
+
+
+    block messages
+      if locals.flashes
+        .inner
+          .flash-messages
+            - const categories = Object.keys(locals.flashes)
+            each category in categories
+              each message in flashes[category]
+                .flash(class=`flash--${category}`)
+                  p.flash__text!= message
+                  button.flash__remove(onClick="this.parentElement.remove()") &times;
+
+    block content
+
+    include footer
+

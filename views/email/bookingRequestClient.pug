@@ -1,0 +1,32 @@
+extends email-layout
+
+block content
+  span.preheader Thank you for requesting an appointment with Anthropawlogy Veterinary Care.
+  table.email-wrapper(width='100%', cellpadding='0', cellspacing='0')
+    tr
+      td(align='center')
+        table.email-content(width='100%', cellpadding='0', cellspacing='0')
+          tr
+            td.email-masthead
+              a.email-masthead_name(href='https://anthropawlogyvet.com') Anthropawlogy Veterinary Care
+          tr
+            td.email-body(width='100%', cellpadding='0', cellspacing='0')
+              table.email-body_inner(align='center', width='570', cellpadding='0', cellspacing='0')
+                // Body content
+                tr
+                  td.content-cell
+                    h1 Hello #{data.contactFirstName},
+                    p Thank you for requesting an appointment with
+                      b  Anthropawlogy Veterinary Care.
+                      |  We can't wait to see #{data.petName}!
+                    p You should receive confirmation and appointment details through your preferred method of contact within the business day.
+                    p Please reply to this email or call 406-624-9060 if you have any questions about your booking request.
+                    p Thanks,
+                      br
+                      | Anthropawlogy Veterinary Care
+          tr
+            td
+              table.email-footer(align='center', width='570', cellpadding='0', cellspacing='0')
+                tr
+                  td.content-cell(align='center')
+                    p.sub.align-center © #{new Date().getFullYear()} Anthropawlogy Veterinary Care. All rights reserved.

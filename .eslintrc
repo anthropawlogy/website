@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "prettier",
+    "prettier/react"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "printWitdth": 120,
+      }
+    ]
+  },
+  "plugins": [
+    // html,
+    "prettier"
+  ]
+}

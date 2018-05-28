@@ -1,0 +1,31 @@
+
+// footer styling
+.footer {
+  background:#79908A;
+  .text-muted {
+    color: #BDC7C2 !important;
+  }
+  li {
+    font-size: .9rem;
+    line-height: 1.5;
+  }
+  a {
+  color: #BDC7C2;  // disable blue link for mobile devices
+}}
+.socket {
+  background: #79908A;
+}
+
+
+
+//*---Media Queries --*/
+@media all and (max-width: 767px) {
+  .footer {
+    text-align:center !important;
+  }
+  .hours {
+    justify-content: center;
+    margin-left: 4rem;
+  }
+}
+

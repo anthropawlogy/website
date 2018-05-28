@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  section
+    .container.d-none.d-sm-block
+      .jumbotron.d-flex.flex-column.justify-content-center.jumbotron-hospice
+        .container.p-5
+          .col-6
+            h2.display-5 Veterinary hospice care in the comfort of your home.
+            p.mt-5
+              a.btn.btn-success.btn-lg(href='/booking', role='button') Book a visit
+    .container.d-sm-none
+      .jumbotron-hospice.jumbotron-mobile
+        .container.py-5.px-3
+          .col-6
+            h2.mobile Veterinary hospice care in the comfort of your home.
+            p.mt-3
+              a.btn.btn-success.btn-sm(href='/booking', role='button') Book a visit
+
+
+  section
+    .container
+      .row.home-box.p-md-5.p-3.justify-content-around
+          .col-md-5.col-10.mt-3.mb-md-3.mb-3.border-right
+            h4 Planning Hospice Care
+          .col-md-5.col-10.mt-md-3.mb-2
+            p.lead Hospice care revolves around maintaining comfort by focusing on pain recognition and treatment, supplemental diet, and education about your pet’s condition and end-of-life stages.
+            p.lead Our team will carefully work together with you to ensure this process is as peaceful as possible for the whole family.
+            p.lead It’s important to recognize when these tools are no longer helping and that you don’t have to wait for an emergency to schedule a euthanasia. We are here as a guide during this difficult decision-making process.
+    hr.light
+    .container
+      .row.home-box.p-md-5.p-3.justify-content-around
+          .col-md-5.col-10.mt-3.mb-md-3.mb-3.border-right
+            h4 When It's Time
+          .col-md-5.col-10.mt-md-3.mb-2
+            p.lead Euthanasia literally means the “good death”. We deliver the highest level of care and dignity connected with ending the life of a precious family member. It is an honor to be there with you during such a difficult time.
+            p.lead We will explain the entire process based on your level of interest and comfort. After you and your pet are ready, we will carry out the final procedure.
+            p.lead Afterwards, we will step out so you may spend as much time as you need. You may choose to keep your pet for home burial, or we offer cremation services where the private ashes are returned to your home in a wooden urn within two weeks.
+    hr.light

@@ -1,0 +1,45 @@
+extends layout
+
+block content
+
+  section.homecare
+    .container.d-none.d-sm-block
+      .jumbotron.d-flex.flex-column.justify-content-center.jumbotron-homecare.text-white
+        .container.p-5
+          .col-6
+            h2.display-5 Lightweight, compassionate veterinary care in the comfort of your home.
+            p.mt-5
+              a.btn.btn-success.btn-lg(href='/booking', role='button') Book a visit
+    .container.d-sm-none
+      .jumbotron-homecare.jumbotron-mobile.text-white
+        .container.py-5.px-3
+          .col-6
+            h2.mobile Lightweight, compassionate veterinary care in the comfort of your home.
+            p.mt-3
+              a.btn.btn-success.btn-sm(href='/booking', role='button') Book a visit
+
+  hr.light
+  section
+    .container
+      .row.home-box.p-md-5.p-3.justify-content-around
+          .col-md-5.col-10.mt-3.mb-md-3.mb-3.border-right
+            h4 Our services
+          .col-md-5.col-10.mt-md-3.mb-2
+            p.lead We offer compassionate veterinary care in the comfort of your home. Less stress for your pet, less stress for you.
+            p.lead Our mobile service can complete nearly everything of an in-clinic visit, treating your pet conservatively, and letting you know when it’s time to seek urgent care.​
+    hr.light
+    .container
+      .row.home-box.p-md-5.p-3.justify-content-around
+          .col-md-5.col-10.mt-3.mb-md-3.mb-3.border-right
+            h4 In your home
+          .col-md-5.col-10.mt-md-3.mb-2
+            p.lead We work at your and your pet’s pace, taking as much time as you need. Our appointments are typically longer than an in-clinic visit (30-45 min), allowing us to focus on any concerns you might have.
+            p.lead Feel free to have their favorite toys or treats during the exam to make them feel relaxed. We will work together to develop a treatment plan you are most content with.
+    hr.light
+    .container
+      .row.home-box.p-md-5.p-3.justify-content-around
+          .col-md-5.col-10.mt-3.mb-md-3.mb-3.border-right
+            h4 After the appointment
+          .col-md-5.col-10.mt-md-3.mb-2
+            p.lead We will send you an email summarizing the consultation and should any questions or concerns come up afterwards, please feel free to contact us. We are always reviewing new material and products, and will keep your pet in mind should something seem beneficial.
+    hr.light

@@ -1,0 +1,51 @@
+hr.light {
+  border: 10px solid #F5F5F5;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body {
+  //font-family: 'Work sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  // font-size: 16px;
+  // line-height: 1.5;
+  font-size: 12px !important;
+  line-height: 1.428 !important;
+  color: #222326;
+  // fixed-top navbar fix to push contents down
+//  padding-top: 91.25px;
+  background: #F5F5F5 !important;
+}
+
+.container-fluid, .container {
+  max-width:920px !important;
+}
+
+
+.btn-lg, .btn-group-lg > .btn {
+    padding: 0.5rem 3rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 2rem
+}
+
+
+.padding {
+  padding: 1rem;
+}
+
+//*---Media Queries --*/
+@media all and (max-width: 768px) {
+  // body {
+  //   padding-top: 108.21px;
+  // }
+}
+
+@media all and (max-width: 576px) {
+  // body {
+  //   padding-top: 155.5px;
+  // }
+}
+
+.btn-success {
+  color: white !important;
+}
