@@ -5,7 +5,6 @@
   margin-left: -15px;
   background-size: cover !important;
   margin-bottom: 0px !important;
-  min-height: 500px;
   //font-family: 'Lato', 'Work Sans', 'Avenir Next','Helvetica Neue','Helvetica',Arial,sans-serif;
   h2 {
     font-weight: 500 !important;
@@ -15,35 +14,39 @@
 
 .jumbotron-homecare {
   background: url('/images/photos/jumbotron-homecare.jpg');
-  background-position: bottom right !important;
+  background-position: top right !important;
+  min-height: 550px;
 }
 .jumbotron-hospice {
   background: url('/images/photos/jumbotron-hospice.jpg');
   background-position: bottom right !important;
+  min-height: 550px;
+  //min-width: 890px !important;
   //margin-top: -100px !important;
 }
 
 .jumbotron-pricing {
   background: url('/images/photos/jumbotron-services.jpg');
-  background-position: center center !important;
-  background-size: auto 100% !important;
-  background-repeat: no-repeat;
-}
-.jumbotron-about {
-  min-height: 400px;
-  vertical-align: middle;
+
+  background-position: top right !important;
+  min-height: 550px;
+
+  // background-position: center center !important;
+  // background-size: auto 100% !important;
+  // background-repeat: no-repeat;
 }
 
 // .jumbotron-about {
 //   background: url('/images/photos/jumbotron-about.jpg');
-//   background-repeat:no-repeat;
-//   //background-size:contain !important;
-//   //background-position:center;
-//   background-position:top right;
-//   //min-height: 531px !important;
-//   //min-width: 890px !important;
-//   //background-size: cover !important;
-//   //min-height: 40vh !important;
+//   background-position: bottom right !important;
+  //background-position: bottom right !important;
+  // background-repeat:no-repeat;
+  //background-size:contain !important;
+  //background-position:center;
+  // background-position:top right;
+
+  //background-size: cover !important;
+  //min-height: 40vh !important;
 // }
 
 // .jumbotron-about-mobile {
@@ -51,7 +54,7 @@
 // }
 
 .jumbotron-mobile {
-  min-height: 200px;
+  min-height: 150px !important;
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
@@ -60,4 +63,5 @@
   background-size: cover;
   background-size: 100% auto !important;
 }
+
 

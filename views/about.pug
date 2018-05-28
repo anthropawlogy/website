@@ -2,11 +2,36 @@ extends layout
 
 block content
 
+
   section
-    .container.d-none.d-sm-block
-      .jumbotron.d-flex.flex-column.justify-content-center.jumbotron-about.text-white.m-1
-        .container.p-5
-          .col-7.definition
+    //- .container.d-none.d-sm-block
+    //-   .boxaround.container
+    //-   .jumbotron.d-flex.flex-column.justify-content-center.m-1
+    //-     .container.p-5
+    //-       .row
+    //-         .col-6.definition
+    //-           h1.display-4 anthropawlogy
+    //-           h4.display-5 [ an-
+    //-             i thruh
+    //-             | -pawl-
+    //-             i uh
+    //-             | -jee ]
+    //-           p
+    //-             h5
+    //-               i (noun)
+    //-           p
+    //-             h5
+    //-               | To enhance and sustain
+    //-               br
+    //-               | the human-animal bond.
+    //-         .col-6
+    //-           img.img-fluid(src="images/photos/photo-about.png")
+
+
+    .container.padding.d-none.d-md-block
+      .row.align-items-center.mx-auto.jumbotron-about
+        .col-sm
+          .container
             h1.display-4 anthropawlogy
             h4.display-5 [ an-
               i thruh
@@ -17,21 +42,29 @@ block content
               h5
                 i (noun)
             p
-              h5 To enhance the human-animal bond.
-    .container.d-sm-none
-      .jumbotron-about-mobile.jumbotron-mobile.text-white.py-4
-        .container.py-5.px-3
-          .col-11.definition
-            h4 anthropawlogy
-            h2.mobile-about [ an-
-              i thruh
-              | -pawl-
-              i uh
-              | -jee ]
-            h2.mobile-about
-              i (noun)
-          .col-6.definition
-            h2.mobile-about To enhance the human-animal bond.
+              h5
+                | To enhance and sustain
+                br
+                | the human-animal bond.
+        .col-sm
+          img.img-fluid(src="images/photos/photo-about.png")
+
+    .container.d-md-none
+      .jumbotron-about-mobile.jumbotron-mobile.d-flex.flex-column.justify-content-center
+          .row.align-items-center
+            .col
+              h4 anthropawlogy
+              h2.mobile-about [ an-
+                i thruh
+                | -pawl-
+                i uh
+                | -jee ]
+              h2.mobile-about
+                i (noun)
+              h2.mobile-about To enhance the human-animal bond.
+            .col
+              img.img-fluid(src='/images/photos/photo-about.png')
+
 
   .container.padding.about
     .row
