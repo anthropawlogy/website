@@ -57,6 +57,17 @@ app.use((req, res, next) => {
   next();
 });
 
+// make sure robots.txt works
+app.use(function (req, res, next) {
+    if ('/robots.txt' == req.url) {
+        res.type('text/plain')
+        res.send("User-agent: *\nDisallow: \nSitemap: https://www.anthropawlogyvet.com/sitemap.xml /");
+    } else {
+        next();
+    }
+});
+
+
 // Done with middleware, handle our own routes
 app.use('/', routes);
 
