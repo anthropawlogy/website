@@ -9,9 +9,24 @@ const expressValidator = require('express-validator');
 const routes = require('./routes/index');
 const helpers = require('./helpers');
 const errorHandlers = require('./handlers/errorHandlers');
+const sitemap = require('sitemap');
 
 // create our Express app
 const app = express();
+
+//create sitemap
+const sm = sitemap.createSitemap({
+  hostname: 'https://www.anthropawlogyvet.com',
+  cacheTime: 600000,        // 600 sec - cache purge period
+  urls: [
+    { url: '/', changefreq: 'daily', priority: 1.00 },
+    { url: '/homecare/', changefreq: 'daily', priority: 0.8 },
+    { url: '/hospice/', changefreq: 'daily', priority: 0.8 },
+    { url: '/booking/', changefreq: 'daily', priority: 0.8 },
+    { url: '/about/', changefreq: 'daily', priority: 0.5 },
+  ]
+})
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views')); // this is the folder where we keep our pug files
@@ -57,14 +72,25 @@ app.use((req, res, next) => {
   next();
 });
 
-// make sure robots.txt works
-app.use(function (req, res, next) {
-    if ('/robots.txt' == req.url) {
-        res.type('text/plain')
-        res.send("User-agent: *\nDisallow: \nSitemap: https://www.anthropawlogyvet.com/sitemap.xml /");
-    } else {
-        next();
+// make sure sitemap.xml works
+app.get('/sitemap.xml', function (req, res) {
+  sm.toXML((err, xml) => {
+    if (err) {
+      return res.status(500).end();
     }
+    res.header('Content-Type', 'application/xml');
+    res.send(xml);
+  });
+});
+
+// make sure robots.txt works
+app.use((req, res, next) => {
+  if ('/robots.txt' == req.url) {
+    res.type('text/plain')
+    res.send("User-agent: *\nDisallow: \nSitemap: https://www.anthropawlogyvet.com/sitemap.xml");
+  } else {
+    next();
+  }
 });
 
 
