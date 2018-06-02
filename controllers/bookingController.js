@@ -1,7 +1,7 @@
 const mail = require('../handlers/mail');
 
 exports.homePage = (req, res) => {
-  res.render(req.query.done === "1" ? 'booking/booking-success' : 'booking/booking');
+  res.render(req.query.done === "1" ? 'booking/booking-success' : 'booking/booking', { title: "Request an appintment |", slug: '/booking' });
 };
 
 exports.email = async (req, res) => {

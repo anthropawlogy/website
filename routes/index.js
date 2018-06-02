@@ -10,23 +10,23 @@ router.get('/landing', (req, res) => {
 });
 
 router.get('/', (req, res) => {
-  res.render('homecare');
+  res.render('homecare', { title: "", slug: '/' });
 });
 
 router.get('/homecare', (req, res) => {
-  res.render('homecare');
+  res.render('homecare', { title: "Home Care |", slug: '/homecare' });
 });
 
 router.get('/hospice', (req, res) => {
-  res.render('hospice');
+  res.render('hospice', { title: "Hospice Care and Home Euthanasia |", slug: '/hospice' });
 });
 
 router.get('/services', (req, res) => {
-  res.render('pricing');
+  res.render('pricing', { title: "Services |", slug: '/pricing' });
 });
 
 router.get('/about', (req, res) => {
-  res.render('about');
+  res.render('about', { title: "About us |", slug: '/about' });
 });
 
 router.get('/booking', bookingController.homePage);

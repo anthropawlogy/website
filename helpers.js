@@ -18,11 +18,12 @@ exports.staticMap = ([lng, lat]) => `https://maps.googleapis.com/maps/api/static
 exports.icon = (name) => fs.readFileSync(`./public/images/icons/${name}.svg`);
 
 // Some details about the site
-exports.siteName = `Anthropawlogy Veterinary Care`;
+exports.siteName = `Anthropawlogy Veterinary Care - Mobile veterinary services in Missoula`;
 
-exports.menu = [
-  { slug: '/homecare', title: 'Home Care', icon: 'logo_atplgy', },
-  { slug: '/hospice', title: 'Hospice', icon: 'logo_atplgy', },
-  { slug: '/services', title: 'Services', icon: 'logo_atplgy', },
-  { slug: '/about', title: 'About Us', icon: 'logo_atplgy', },
-];
+// exports.menu = [
+//   { slug: '/homecare', title: 'Home Care', icon: 'logo_atplgy', },
+//   { slug: '/hospice', title: 'Hospice Care and Home Euthanasia', icon: 'logo_atplgy', },
+//   { slug: '/services', title: 'Services', icon: 'logo_atplgy', },
+//   { slug: '/about', title: 'About Us', icon: 'logo_atplgy', },
+//   { slug: '/about', title: 'Request an appointment', icon: 'logo_atplgy', },
+// ];

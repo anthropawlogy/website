@@ -23,7 +23,8 @@ html
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
-    title Anthropawlogy Veterinary Care - Mobile veterinary services in Missoula, MT
+    title= `${title} ${h.siteName}`
+
     meta(property='og:image', content='/images/brand/fb_tn.jpg')
     meta(property='og:type', content='website')
     meta(property='og:url', content='https://anthropawlogyvet.com')
@@ -34,6 +35,8 @@ html
     link(rel='icon', type='image/png', href='/images/icon/favicon-32x32.png', sizes='32x32')
     link(rel='icon', type='image/png', href='/images/icon/favicon-16x16.png', sizes='16x16')
     link(rel="shortcut icon" type="image/png" href="/images/icons/atplgylogo.png")
+    link(rel="canonical", href=`https://anthropawlogyvet.com${slug}`)
+
     block css
       link(rel='stylesheet', href='/dist/style.css')
       link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.0.10/css/all.css')
