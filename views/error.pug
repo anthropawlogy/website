@@ -1,7 +1,23 @@
 extends layout
 
 block content
-  .inner
-    h2= status
-    p= message
-  pre.error!= stackHighlighted
+
+  section
+    .container
+      .row.home-box.p-md-5.p-3.justify-content-around
+          .col-md-5.col-10.mt-3.mb-md-3.mb-3.border-right
+            h4 Page not found!
+          .col-md-5.col-10.mt-md-3.mb-2
+            p.lead
+              | If you're trying to make an appointment with us,
+              |  please send your booking request directly to
+              a(href='mailto:booking@anthropawlogyvet.com')
+                |  booking@anthropawlogyvet.com
+              |  and we can discuss your needs further.
+  hr.light
+
+
+  //-   h2= status
+  //-   p= message
+  //- pre.error!= stackHighlighted
+
