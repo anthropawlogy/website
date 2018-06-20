@@ -6890,6 +6890,9 @@ a.text-dark:hover, a.text-dark:focus {
   .about .card p {
     font-size: 0.95rem !important; } }
 
+#spamCheck {
+  display: none; }
+
 @keyframes slideIn {
   0% {
     transform: translateX(-10px); }

@@ -344,7 +344,7 @@ $(document)
       //"Sunday, April 1, 2018", "Monday, April 2, 2018","Tuesday, April 3, 2018", "Wednesday, April 4, 2018", "Thursday, April 5, 2018", "Friday, April 6, 2018", "Saturday, April 7, 2018"
       // "Saturday, April 14, 2018", "Sunday, April 15, 2018", "Monday, April 16, 2018", "Tuesday, April 17, 2018", "Wednesday, April 18, 2018", "Thursday, April 19, 2018",
       // "Friday, April 20, 2018", "Saturday, April 21, 2018", "Sunday, April 22, 2018", "Monday, April 23, 2018", "Tuesday, April 24, 2018", "Wednesday, April 25, 2018", "Thursday, April 26, 2018", "Friday, April 27, 2018", "Saturday, April 28, 2018"
-      "Monday, June 25, 2018", "Tuesday, June 26, 2018", "Wednesday, June 27, 2018", "Thursday, June 28, 2018", "Friday, June 29, 2018", "Saturday, June 30, 2018",
+      "Friday, June 22, 2018", "Monday, June 25, 2018", "Tuesday, June 26, 2018", "Wednesday, June 27, 2018", "Thursday, June 28, 2018", "Friday, June 29, 2018", "Saturday, June 30, 2018",
       "Sunday, July 1, 2018", "Monday, July 2, 2018"
     ];
 
