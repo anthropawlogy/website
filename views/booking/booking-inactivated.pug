@@ -1,0 +1,37 @@
+extends ../layout
+
+block content
+  section.mb-5
+    .container
+      .ui.middle.aligned.center.aligned.grid(style='margin-top:25px')
+        .column
+          h2.ui.image.header
+            //- img.image(src='img/girl_dog_black.svg')
+            .content
+              | We're fully booked!
+            #form-container.ui.raised.left.aligned.very.padded.segment
+              p Anthropawlogy is not accepting any new clients at this time.
+              p If you are an existing client, please contact us directly at
+                a(href="mailto:booking@anthropawlogy.com")  booking@anthropawlogy.com
+              p Please check back for updates and availability!
+
+  //- semantic ui css
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/dropdown.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/checkbox.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/form.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/popup.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/icon.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/step.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/segment.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/grid.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/button.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/label.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/transition.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/header.min.css')
+
+  //- semantic ui
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/dropdown.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/checkbox.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/form.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/popup.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/transition.min.js")
