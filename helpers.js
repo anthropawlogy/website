@@ -18,7 +18,7 @@ exports.staticMap = ([lng, lat]) => `https://maps.googleapis.com/maps/api/static
 exports.icon = (name) => fs.readFileSync(`./public/images/icons/${name}.svg`);
 
 // Some details about the site
-exports.siteName = `Anthropawlogy Veterinary Care - Mobile veterinary services in Missoula`;
+exports.siteName = `Anthropawlogy Veterinary Care - Mobile veterinary services`;
 
 // exports.menu = [
 //   { slug: '/homecare', title: 'Home Care', icon: 'logo_atplgy', },
