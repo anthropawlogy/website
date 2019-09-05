@@ -16,7 +16,7 @@ const app = express();
 
 //create sitemap
 const sm = sitemap.createSitemap({
-  hostname: 'https://www.anthropawlogyvet.com',
+  hostname: 'https://www.anthropawlogy.com',
   cacheTime: 600000,        // 600 sec - cache purge period
   urls: [
     { url: '/', changefreq: 'daily', priority: 1.00 },
@@ -54,7 +54,6 @@ app.use(session({
   saveUninitialized: false,
 }));
 
-// // The flash middleware let's us use req.flash('error', 'Shit!'), which will then pass that message to the next page the user requests
 app.use(flash());
 
 // pass variables to our templates + all requests
@@ -87,7 +86,7 @@ app.get('/sitemap.xml', function (req, res) {
 app.use((req, res, next) => {
   if ('/robots.txt' == req.url) {
     res.type('text/plain')
-    res.send("User-agent: *\nDisallow: \nSitemap: https://www.anthropawlogyvet.com/sitemap.xml");
+    res.send("User-agent: *\nDisallow: \nSitemap: https://www.anthropawlogy.com/sitemap.xml");
   } else {
     next();
   }

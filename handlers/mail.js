@@ -32,11 +32,11 @@ const generateHTML = (filename, options = {}) => {
 exports.send = async (options) => {
   const html = generateHTML(options.filename, options);
   const mailOptions = {
-    from: `Anthropawlogy Veterinary Care <booking@anthropawlogyvet.com>`,
+    from: `Anthropawlogy Veterinary Care <booking@anthropawlogy.com>`,
     to: options.to,
     subject: options.subject,
     html,
-    text: 'unsupported format, please contact booking@anthropawlogyvet.com to book.'
+    text: 'unsupported format, please contact booking@anthropawlogy.com to book.'
   };
   const sendMail = promisify(transport.sendMail, transport);
 

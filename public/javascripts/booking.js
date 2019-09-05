@@ -1,6 +1,9 @@
 function checkZip(zip) {
-  // valid zip range
-  let zips = [59821, 59863, 59865, 59808, 59834, 59802, 59824, 59831, 59868, 59807, 59806, 59826, 59812, 59801, 59851, 59864, 59804, 59846, 59847];
+  // valid zip range 
+  // MT zips
+  //let zips = [59821, 59863, 59865, 59808, 59834, 59802, 59824, 59831, 59868, 59807, 59806, 59826, 59812, 59801, 59851, 59864, 59804, 59846, 59847];
+  // WA zip codes
+  let zips = [98083,98034,98011,98082,98077,98028,98155,98041,98072,98160,98043,98021,98036,98020,98046,98251,98026,98037,98256,98012,98296,98087,98293,98272,98294,98204,98208,98275,98291,98290,98203,98207,98213,98201,98258,98252,98270];
   // return true if zip is found, otherwise not
   return $.inArray(zip, zips) != -1 ? true : false;
 }
@@ -344,8 +347,8 @@ $(document)
       //"Sunday, April 1, 2018", "Monday, April 2, 2018","Tuesday, April 3, 2018", "Wednesday, April 4, 2018", "Thursday, April 5, 2018", "Friday, April 6, 2018", "Saturday, April 7, 2018"
       // "Saturday, April 14, 2018", "Sunday, April 15, 2018", "Monday, April 16, 2018", "Tuesday, April 17, 2018", "Wednesday, April 18, 2018", "Thursday, April 19, 2018",
       // "Friday, April 20, 2018", "Saturday, April 21, 2018", "Sunday, April 22, 2018", "Monday, April 23, 2018", "Tuesday, April 24, 2018", "Wednesday, April 25, 2018", "Thursday, April 26, 2018", "Friday, April 27, 2018", "Saturday, April 28, 2018"
-      "Friday, June 22, 2018", "Monday, June 25, 2018", "Tuesday, June 26, 2018", "Wednesday, June 27, 2018", "Thursday, June 28, 2018", "Friday, June 29, 2018", "Saturday, June 30, 2018",
-      "Sunday, July 1, 2018", "Monday, July 2, 2018"
+      // "Friday, June 22, 2018", "Monday, June 25, 2018", "Tuesday, June 26, 2018", "Wednesday, June 27, 2018", "Thursday, June 28, 2018", "Friday, June 29, 2018", "Saturday, June 30, 2018",
+      // "Sunday, July 1, 2018", "Monday, July 2, 2018"
     ];
 
     $("#datepicker").datepicker({
@@ -354,26 +357,27 @@ $(document)
         var string = jQuery.datepicker.formatDate('DD, MM d, yy', date);
         var isDisabled = ($.inArray(string, disabledDays) != -1);
         //day != 0 disables all Sundays
-        return [day != 0 && day != 2 && day != 6 && !isDisabled];
+        return [!isDisabled];
+        //return [day != 0 && day != 2 && day != 6 && !isDisabled];
         //return [(day != 0), ''];
       },
       minDate: tomorrow,
       dateFormat: "DD, MM d, yy",
       onSelect: function (date) {
         // only accept evening appointments Weds and Fri (and only evenings for Mondays in October due to FirstVet)
-        if (($("#datepicker").datepicker('getDate').getMonth() == 9 && $("#datepicker").datepicker('getDate').getDay() == 1) || ($("#datepicker").datepicker('getDate').getDay() == 3) || ($("#datepicker").datepicker('getDate').getDay() == 5)) {
-          $("#morning").hide();
-          $("#lunch").hide();
-        }
-        else {
-          $("#morning").show();
-          $("#lunch").show();
-        }
+        // if (($("#datepicker").datepicker('getDate').getMonth() == 9 && $("#datepicker").datepicker('getDate').getDay() == 1) || ($("#datepicker").datepicker('getDate').getDay() == 3) || ($("#datepicker").datepicker('getDate').getDay() == 5)) {
+        //   $("#morning").hide();
+        //   $("#lunch").hide();
+        // }
+        // else {
+        //   $("#morning").show();
+        //   $("#lunch").show();
+        // }
 
-        if ($("#datepicker").datepicker('getDate').getDay() == 6)
-          $("#evening").hide();
-        else
-          $("#evening").show();
+        // if ($("#datepicker").datepicker('getDate').getDay() == 6)
+        //   $("#evening").hide();
+        // else
+        //   $("#evening").show();
       }
     });
 

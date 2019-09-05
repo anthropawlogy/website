@@ -1,7 +1,7 @@
 const mail = require('../handlers/mail');
 
 exports.homePage = (req, res) => {
-  res.render(req.query.done === "1" ? 'booking/booking-success' : 'booking/booking-inactivated', { title: "Request an appointment |", slug: '/booking' });
+  res.render(req.query.done === "1" ? 'booking/booking-success' : 'booking/booking', { title: "Request an appointment |", slug: '/booking' });
 };
 
 exports.email = async (req, res) => {
@@ -25,11 +25,12 @@ exports.email = async (req, res) => {
     await mail.send({
       filename: 'bookingRequest',
       data,
-      to: `Anthropawlogy Veterinary Care <booking@anthropawlogyvet.com>`,
+      to: `Anthropawlogy Veterinary Care <booking@anthropawlogy.com>`,
       subject: 'New Booking Request',
     }
     )
     //  req.flash('success', `Thank you! We will contact to confirm your appointment time within the business day.`);
-    res.redirect('/booking?done=1');
+    const nextPage = '/booking?done=1';
+    res.redirect(nextPage);
   }
 };
