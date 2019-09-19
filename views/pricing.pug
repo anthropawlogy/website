@@ -10,7 +10,7 @@ block content
               | Clear, honest pricing
               br.d-none.d-lg-block
               |  so you can focus on your pet.
-            h4.mt-3 Home visits for $110
+            h4.mt-3 Home visits for $200
             p.mt-5
               a.btn.btn-success.btn-lg(href='/booking', role='button') Book a visit
     .container.d-sm-none
@@ -30,7 +30,7 @@ block content
             .card-body.m-5
               h4.card-title Wellness
               i.fas.fa-stethoscope
-              p.my-3 Physical Exams, Vaccinations and Titers, Nutritional Counsel, Home-Treatments, and more.
+              p.my-3 Physical Exams, Nutritional and Behavioral Counsel, Home-Treatments, and more.
               a.btn.btn-outline-secondary(href="/homecare") Learn more
             .card-footer.bg-info(style="cursor:pointer")
               a.btn.btn-info.btn-block.btn-lg.collapsed(data-toggle='collapse', data-target='#wellness-services')
@@ -42,7 +42,7 @@ block content
                     li
                       a.collapsed(data-toggle='collapse', data-target='#wellness-exam')
                         i.fa-li.fas
-                        strong $110
+                        strong $200
                         |  Wellness Exam
                     #wellness-exam.collapse.desc
                       .col-12
@@ -50,57 +50,57 @@ block content
                     li
                       a.collapsed(data-toggle='collapse', data-target='#additional-pet')
                         i.fa-li.fas
-                        strong $70
+                        strong $180
                         |  Additional Pet Exam
                     #additional-pet.collapse.desc
                       .col-12
-                        p Have more than one pet that needs to be looked at? Or just want to have them on the same schedule? We offer discounted exams for using the buddy-system!
+                        p Have more than one pet that needs to be looked at? We offer discounted exams for using the buddy-system!
                     li
                       a.collapsed(data-toggle='collapse', data-target='#follow-up-exam')
                         i.fa-li.fas.fa-plus-circle
-                        strong $90
+                        strong $180
                         |  Follow-up Exam
                     #follow-up-exam.collapse.desc
                       .col-12
-                        p This includes a recheck for existing issue or visit for vaccine boosters.
-                    li
-                      a.collapsed(data-toggle='collapse', data-target='#vaccine')
-                        i.fa-li.fas.fa-plus-circle
-                        strong $30
-                        |  Vaccine
-                    #vaccine.collapse.desc
-                      .col-12
-                        p Is your pet due for a vaccine? We're happy to bring them up to date and keep your pet protected from various diseases!
-                    li
-                      a.collapsed(data-toggle='collapse', data-target='#booster-vaccine')
-                        i.fa-li.fas.fa-plus-circle
-                        strong $10
-                        |  Booster Vaccine
-                    #booster-vaccine.collapse.desc
-                      .col-12
-                        p This includes booster vaccinations.
-                    li
-                      a.collapsed(data-toggle='collapse', data-target='#individual-test')
-                        i.fa-li.fas.fa-plus-circle
-                        strong $50-200
-                        |  Individual Test
-                    #individual-test.collapse.desc
-                      .col-12
-                        p If your pet may require some extra attention, we offer blood tests, specific tests for intestinal parasites, ear and skin cytology, or urinalysis.
+                        p This includes a recheck for an existing issue.
+                    //- li
+                    //-   a.collapsed(data-toggle='collapse', data-target='#vaccine')
+                    //-     i.fa-li.fas.fa-plus-circle
+                    //-     strong $30
+                    //-     |  Vaccine
+                    //- #vaccine.collapse.desc
+                    //-   .col-12
+                    //-     p Is your pet due for a vaccine? We're happy to bring them up to date and keep your pet protected from various diseases!
+                    //- li
+                    //-   a.collapsed(data-toggle='collapse', data-target='#booster-vaccine')
+                    //-     i.fa-li.fas.fa-plus-circle
+                    //-     strong $10
+                    //-     |  Booster Vaccine
+                    //- #booster-vaccine.collapse.desc
+                    //-   .col-12
+                    //-     p This includes booster vaccinations.
+                    //- li
+                    //-   a.collapsed(data-toggle='collapse', data-target='#individual-test')
+                    //-     i.fa-li.fas.fa-plus-circle
+                    //-     strong $50-200
+                    //-     |  Individual Test
+                    //- #individual-test.collapse.desc
+                    //-   .col-12
+                    //-     p If your pet may require some extra attention, we offer blood tests, specific tests for intestinal parasites, ear and skin cytology, or urinalysis.
                     li
                       a.collapsed(data-toggle='collapse', data-target='#medications')
                         i.fa-li.fas.fa-plus-circle
-                        strong $10-60
+                        strong $20+
                         |  Medications
                     #medications.collapse.desc
                       .col-12
-                        p Your pet may need medications to get through a certain time, and we're happy to help! This includes medications for up to 10 days. Medications vary based on the product and the pet's weight.
+                        p Your pet may need medications to get through a certain time, and we are happy to help. This includes medications for up to 10 days. Medications vary based on the product and the pet's weight.
         .col-md-6
           .card.text-center
             .card-body.m-5
               h4.card-title End of Life
               i.fas.fa-paw
-              p.my-3 Hospice care, Quality of Life assessment, Home Euthanasia and cremation services.
+              p.my-3 Hospice care, Quality of Life Assessment, Home Euthanasia and Cremation Services.
               a.btn.btn-outline-secondary(href="/hospice") Learn more
               //- hidden pricing section
             .card-footer.bg-info(style="cursor:pointer")
@@ -113,15 +113,16 @@ block content
                     li
                       a.collapsed(data-toggle='collapse', data-target='#qoa-assessment')
                         i.fa-li.fas
-                        strong $110
-                        |  Quality of Life Assessment
+                        strong $400
+                        |  Hospice Care
                     #qoa-assessment.collapse.desc
                       .col-12
-                        p When getting older has gotten hard, we work closely with you to manage end of life care to keep your pet as comfortable as possible.
+                        //- p When getting older has gotten hard, we work closely with you to manage end of life care to keep your pet as comfortable as possible.
+                        p When getting older has gotten harder for your pet, we work closely with you to keep them as comfortable as possible. This includes a quality of life assessment and tailored treatment plan so you feel empowered to care for and monitor your pet's condition.
                     li
                       a.collapsed(data-toggle='collapse', data-target='#feline-euthanasia')
                         i.fa-li.fas
-                        strong $375
+                        strong $400
                         |  Feline Home Euthanasia
                     #feline-euthanasia.collapse.desc
                       .col-12
@@ -129,7 +130,7 @@ block content
                     li
                       a.collapsed(data-toggle='collapse', data-target='#canine-euthanasia')
                         i.fa-li.fas.fa-plus-circle
-                        strong $575
+                        strong $600
                         |  Canine Home Euthanasia
                     #canine-euthanasia.collapse.desc
                       .col-12
@@ -137,7 +138,7 @@ block content
                     li
                       a.collapsed(data-toggle='collapse', data-target='#private-cremation')
                         i.fa-li.fas.fa-plus-circle
-                        strong $50
+                        strong $200
                         |  Private Cremation
                     #private-cremation.collapse.desc
                       .col-12
@@ -158,39 +159,39 @@ block content
                   h4 Where are you located?
                   i.fas.fa-plus-circle.d-none.d-md-block
               #faq-loc.collapse.ml-3
-                p.lead.text-muted We are a mobile practice, which means we don’t have brick-mortar clinic. Instead, we come to you!
+                p.lead.text-muted We are a mobile practice, which means we do not have brick-mortar clinic. Instead, we come to you.
           .card.border-0.bg-transparent
             .card-body.qa-footer
               a.collapsed.btn.btn-light.border-0(data-toggle='collapse', data-target='#faq-contact')
                   h4 How can we contact you?
                   i.fas.fa-plus-circle.d-none.d-md-block
               #faq-contact.collapse.ml-3
-                p.lead.text-muted 
-                  | By phone, 
+                p.lead.text-muted
+                  | By phone,
                   a.text-muted(href='mailto:vet@anthropawlogy.com') email
-                  | , or book on the website! You may notice you are forwarded to a voicemail system when you call our office. We are a small operation without a receptionist, meaning a trained veterinary technician will call you back ASAP within our office hours. We prioritize our clients during their appointment and during phone calls, so you won’t experience any interruptions either.
-                  strong.font-italic  If you’re experiencing an emergency after-hours please call a local veterinary emergency center in the area.
+                  | , or book on the website. You may notice you are forwarded to a voicemail system when you call our office. We are a small operation without a receptionist, meaning a trained veterinary technician will call you back ASAP within our office hours. We prioritize our clients during their appointment and during phone calls, so you won’t experience any interruptions either.
+                  strong.font-italic  If you are experiencing an emergency after-hours, please call a local veterinary emergency center in the area.
           .card.border-0.bg-transparent
             .card-body.qa-footer
               a.collapsed.btn.btn-light(data-toggle='collapse', data-target='#faq-areas')
                   h4 What areas do you service?
                   i.fas.fa-plus-circle.d-none.d-md-block
               #faq-areas.collapse.ml-3
-                p.lead.text-muted We’re currently operating in Mill Creek, WA with surrounding areas and will travel up to 20 miles for an additional trip fee of $100.
+                p.lead.text-muted We are currently operating in Seattle, WA and surrounding areas.
           .card.border-0.bg-transparent
             .card-body.qa-footer
               a.collapsed.btn.btn-light(data-toggle='collapse', data-target='#faq-species')
                   h4 What species do you care for?
                   i.fas.fa-plus-circle.d-none.d-md-block
               #faq-species.collapse.ml-3
-                p.lead.text-muted Mostly dogs and cats, but are happy to help any pet we feel can benefit from our services. Not currently offering large-animal services.
+                p.lead.text-muted Mostly dogs and cats, but we are happy to help any pet that may benefit from our services. We are not currently offering large-animal services.
           .card.border-0.bg-transparent
             .card-body.qa-footer
               a.collapsed.btn.btn-light(data-toggle='collapse', data-target='#faq-cancel')
                   h4 How do I cancel my appointment?
                   i.fas.fa-plus-circle.d-none.d-md-block
               #faq-cancel.collapse.ml-3
-                p.lead.text-muted Just get in contact with us at your earliest convenience so that we may schedule to help another puppy or kitty in need.
+                p.lead.text-muted Get in contact with us at your earliest convenience so that we may schedule to help another furry friend in need.
           .card.border-0.bg-transparent
             .card-body.qa-footer
               a.collapsed.btn.btn-light(data-toggle='collapse', data-target='#faq-payment')
@@ -204,11 +205,11 @@ block content
                   h4 Do we pay before or after appointment?
                   i.fas.fa-plus-circle.d-none.d-md-block
               #faq-onpay.collapse.ml-3
-                p.lead.text-muted For euthanasia appointments, most people prefer to pay before. Otherwise, payment is requested after services are performed.
+                p.lead.text-muted For euthanasia appointments, some people prefer to pay before the procedure. Otherwise, payment is requested after services are performed.
           .card.border-0.bg-transparent
             .card-body.qa-footer
               a.collapsed.btn.btn-light(data-toggle='collapse', data-target='#faq-sx')
                   h4 Are you able to do x-rays, surgery, or dentals?
                   i.fas.fa-plus-circle.d-none.d-md-block
               #faq-sx.collapse.ml-3
-                p.lead.text-muted We don’t currently have that sort of capability, but we work closely with clinics in town to accommodate services as your pet may need.
+                p.lead.text-muted We do not have that sort of capability currently, but we work closely with clinics in town to accommodate services your pet may need.
